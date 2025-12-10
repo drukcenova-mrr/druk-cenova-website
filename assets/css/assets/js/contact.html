@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Druk Cenova | Get in Touch</title>
+    <meta name="description" content="Contact Druk Cenova for digital solutions. Get in touch with our team today.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/cenova-logo.svg" type="image/svg+xml">
+    
+    <style>
+        :root {
+            --primary-color: #d10000;
+            --secondary-color: #1a1a1a;
+            --accent-gold: #c6a467;
+            --light-bg: #f8f9fa;
+            --dark-bg: #111;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 76px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        /* Fixed Contact Icons Styling */
+        .contact-info-card {
+            background: var(--light-bg);
+            border-radius: 15px;
+            padding: 40px;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .contact-method {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            margin-bottom: 0.25rem;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+        
+        .contact-details p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .contact-form {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-control, .form-select {
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(209, 0, 0, 0.1);
+        }
+        
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .btn-submit {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .btn-submit:hover {
+            background-color: #a00000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 30px;
+            padding: 12px 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-whatsapp i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            height: 400px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .contact-option {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-option-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .contact-option h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .contact-option p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-outline-primary {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 20px;
+            padding: 6px 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        
+        .social-contact .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-contact .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(209, 0, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .social-contact .social-icon:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- Left Menu -->
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Center Logo -->
+            <a class="navbar-brand mx-auto" href="index.html">Druk Cenova</a>
+            
+            <!-- Right side -->
+            <div class="d-flex align-items-center">
+                <i class="fas fa-phone text-danger fs-5 me-3"></i>
+                <a href="contact.html" class="btn btn-login">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="animate-on-scroll">Get In Touch</h1>
+            <p class="lead animate-on-scroll delay-100">
+                We'd love to hear from you. Let's start a conversation and explore how we can help your business grow.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Info & Form -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="contact-info-card animate-on-scroll">
+                        <h3 class="mb-4">Contact Details</h3>
+                        
+                        <!-- Location -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Our Location</h4>
+                                <p>Lovely Professional University<br>Phagwara, Punjab 144411</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone Number</h4>
+                                <p>+91 75691 96163<br>Mon-Fri: 9AM-6PM IST</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Address</h4>
+                                <p>cenova@gmail.com<br>support@drukcenova.com</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Instagram -->
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Instagram</h4>
+                                <p>@drukcenova<br>Follow us for updates</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="social-contact mt-5 pt-4 border-top">
+                            <h5 class="mb-3">Connect With Us</h5>
+                            <div class="social-icons">
+                                <a href="https://www.instagram.com/drukcenova" target="_blank" class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://wa.me/917569196163" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="contact-form animate-on-scroll delay-100">
+                        <h3 class="mb-4">Send Us a Message</h3>
+                        <p class="mb-4">Fill out the form below and we'll get back to you within 24 hours.</p>
+                        
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" placeholder="your@email.com" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="+91 98765 43210">
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="subject" class="form-label">Subject *</label>
+                                        <select class="form-select" id="subject" required>
+                                            <option value="" selected disabled>Select a subject</option>
+                                            <option value="web">Website Development</option>
+                                            <option value="ai">AI Solutions</option>
+                                            <option value="cloud">Cloud Services</option>
+                                            <option value="consulting">Consultation</option>
+                                            <option value="partnership">Partnership</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="message" class="form-label">Message *</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe to our newsletter for updates
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-submit">
+                                        <i class="fas fa-paper-plane me-2"></i> Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <!-- WhatsApp Button -->
+                        <div class="text-center mt-4 pt-3 border-top">
+                            <p class="mb-2">Or reach us directly on WhatsApp:</p>
+                            <a href="https://wa.me/917569196163" class="btn btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="map-container animate-on-scroll delay-200 mt-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3413.738037706424!2d75.7036792!3d31.2552875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5f5e9c489cf3%3A0x4049a5409d53c300!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1702099167926!5m2!1sen!2sin" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title animate-on-scroll">Other Ways to Reach Us</h2>
+                    <p class="section-subtitle animate-on-scroll delay-100 mb-5">Choose your preferred method of communication</p>
+                    
+                    <div class="row">
+                        <!-- WhatsApp Option -->
+                        <div class="col-md-4 mb-4">
+                            <div class="contact-option animate-on-scroll">
+                                <div class="contact-option-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <h4>WhatsApp</h4>
+                                <p>Message us directly for quick responses.</p>
+                                <a href="https://wa.me/917569196163" class="btn btn-outline-primary" target="_blank">Message Now</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Email Option -->
+                        <div class="col-md-4 mb-4">
+                            <div class="contact-option animate-on-scroll delay-100">
+                                <div class="contact-option-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h4>Email</h4>
+                                <p>Send us an email for detailed inquiries.</p>
+                                <a href="mailto:cenova@gmail.com" class="btn btn-outline-primary">Send Email</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Instagram Option -->
+                        <div class="col-md-4 mb-4">
+                            <div class="contact-option animate-on-scroll delay-200">
+                                <div class="contact-option-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <h4>Instagram</h4>
+                                <p>DM us on Instagram for quick chat.</p>
+                                <a href="https://www.instagram.com/drukcenova" target="_blank" class="btn btn-outline-primary">Follow Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h2 class="section-title mb-4 animate-on-scroll">
+                        Why Choose Druk Cenova?
+                    </h2>
+                    <p class="lead mb-5 animate-on-scroll delay-100" style="font-size: 1.3rem; color: #666;">
+                        We combine technical expertise with business acumen to deliver solutions 
+                        that not only work perfectly but also drive measurable results for your business.
+                    </p>
+                    
+                    <div class="why-choose-grid">
+                        <div class="why-choose-card animate-on-scroll">
+                            <div class="why-choose-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h4>Proven Results</h4>
+                            <p>Track record of delivering measurable business outcomes through technology solutions.</p>
+                        </div>
+                        
+                        <div class="why-choose-card animate-on-scroll delay-100">
+                            <div class="why-choose-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Expert Team</h4>
+                            <p>Handpicked professionals with diverse expertise across technologies and industries.</p>
+                        </div>
+                        
+                        <div class="why-choose-card animate-on-scroll delay-200">
+                            <div class="why-choose-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h4>Process Excellence</h4>
+                            <p>Structured approach ensuring quality, timeliness, and clear communication throughout.</p>
+                        </div>
+                        
+                        <div class="why-choose-card animate-on-scroll delay-300">
+                            <div class="why-choose-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4>Ongoing Support</h4>
+                            <p>Comprehensive support and maintenance to ensure your solutions keep performing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 animate-on-scroll delay-400">
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calendar-check me-2"></i>Schedule Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand mb-3">
+                        <h3 style="font-family: 'Brush Script MT', cursive; color: white; font-size: 2.5rem;">Druk Cenova</h3>
+                    </div>
+                    <p class="footer-text">
+                        Building digital friendships through innovative technology solutions.
+                        We're your partner in digital transformation.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="https://www.instagram.com/drukcenova" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-heading">Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">AI Solutions</a></li>
+                        <li><a href="index.html#services">Web Development</a></li>
+                        <li><a href="index.html#services">Cloud Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="footer-heading">Contact Info</h5>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Lovely Professional University, Phagwara, Punjab</li>
+                        <li><i class="fas fa-phone me-2"></i> +91 75691 96163</li>
+                        <li><i class="fas fa-envelope me-2"></i> cenova@gmail.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon–Fri: 9AM–6PM IST</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="copyright">© <span class="current-year">2024</span> Druk Cenova. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/917569196163" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
